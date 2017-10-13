@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import DropDown from '../../components/DropDown'
 
-export default class NestedCalculator extends Component {
+export default class PropertyCalculator extends Component {
 
     constructor (props) {
         super(props)   

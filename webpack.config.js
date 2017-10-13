@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: [
-        './containers/NestedCalculator/index.js'
+        './containers/PropertyCalculator/index.js'
     ],
     output: {
         path: __dirname + '/bundles',

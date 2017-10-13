@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import propertyDataActions from '../../actions/propertyDataActions'
-import NestedCalculator from './NestedCalculator'
+import PropertyCalculator from './PropertyCalculator'
 
 const mapStateToProps = state => ({ state })
 const mapDispatchToProps = dispatch => ({ dispatch })
@@ -21,4 +21,4 @@ const mergeProps = ({ state }, { dispatch }, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(NestedCalculator)
+export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(PropertyCalculator)
