@@ -5,8 +5,8 @@ module.exports = {
         './containers/PropertyCalculator/index.js'
     ],
     output: {
-        path: __dirname + '/bundles',
-        publicPath: '/bundles',
+        path: __dirname + '/',
+        publicPath: '/',
         filename: 'bundle.js'
     },
     devtool: process.env.NODE_ENV === 'production' ? 'cheap-module-source-map' : 'cheap-module-eval-source-map',
