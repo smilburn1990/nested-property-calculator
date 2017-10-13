@@ -22,13 +22,13 @@ class PropertyDataActions {
         }
     }
 
-    propertyDataRequested (content) {
+    propertyDataRequested (propertyData) {
         return {
             type: 'PROPERTY_DATA_REQUESTED'
         }
     }
 
-    propertyDataResolved (content) {
+    propertyDataResolved (propertyData) {
         return {
             type: 'PROPERTY_DATA_RESOLVED',
             propertyData

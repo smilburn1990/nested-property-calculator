@@ -9,18 +9,17 @@ export default class PropertyCalculator extends Component {
         super(props)   
     }
 
-    componentWillMount () {
+    componentWillMount() {
         const { propertyDataStatus, fetchPropertyData } = this.props
-        if (contentStatus === 'INITIAL') {
+        if (propertyDataStatus === 'INITIAL') {
             fetchPropertyData()
-            console.log(this.props)
         }
     }
 
-    renderComponents () {
+    renderComponents() {
+        console.log(this.props)
         return (
             <div>
-                <h1>Hello World</h1>
                 <DropDown
                     propertyData={this.props.propertyData}
                 />

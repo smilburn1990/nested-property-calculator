@@ -2,7 +2,7 @@ import './styles/_main.scss'
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import configureStore from '../store/configureStore';
+import configureStore from './store/configureStore';
 import { syncHistoryWithStore } from 'react-router-redux'
 import { Router, Route, browserHistory } from 'react-router'
 import PropertyCalculator from './containers/PropertyCalculator'

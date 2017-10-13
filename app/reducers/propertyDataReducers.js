@@ -8,7 +8,7 @@ class PropertyDataReducers {
     }
 
     propertyDataResolved (state, action) {
-        const { content } = action
+        const { propertyData } = action
         const nextState = Object.assign({}, state, {
             propertyDataStatus: 'READY',
             propertyData

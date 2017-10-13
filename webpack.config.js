@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: [
-        './containers/PropertyCalculator/index.js'
+        './app/index.js'
     ],
     output: {
         path: __dirname + '/',
@@ -15,9 +15,9 @@ module.exports = {
             {
                 test: /\.css$/,
                     use: [
-                    'style-loader',
-                    'css-loader?importLoaders=1',
-                    'postcss-loader'
+                        'style-loader',
+                        'css-loader?importLoaders=1',
+                        'postcss-loader'
                     ]
             }
         ],
