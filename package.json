@@ -2,7 +2,7 @@
   "name": "Nested",
   "version": "1.1.0",
   "main": "index.js",
-  "description": "Nested Calculator package.json",
+  "description": "Nested Property Calculator package.json",
   "private": true,
   "dependencies": {
     "gulp-autoprefixer": "3.1.1",
@@ -38,7 +38,7 @@
   "scripts": {
     "default": "gulp default",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require ./react_redux/test/test_helper.js './react_redux/pages/*/test*/*.@(js|jsx)'",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require ./app/test/test_helper.js './app/containers/*/test*/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch",
     "init": "gulp default",
     "build": "NODE_ENV=production webpack --config webpack.config.js --process -p"

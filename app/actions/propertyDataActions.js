@@ -1,7 +1,7 @@
 import 'whatwg-fetch' 
 class PropertyDataActions {
 
-    loadPropertyData(url, method) {
+    loadPropertyData(url, method, apiKey = null) {
         return (dispatch) => {
             const requestedAction = this.propertyDataRequested()
             dispatch(requestedAction)
@@ -12,13 +12,16 @@ class PropertyDataActions {
                 .then(function(json) {
                     if(json.errors) {
                         dispatch(this.propertyDataRequestFailed(json.errors))
-                    } else {
+                    } 
+                    else {
                         dispatch(this.propertyDataResolved(json))
                     }
-                }.bind(this))
+                }
+                .bind(this))
                 .catch (function(ex) {
                     dispatch(this.propertyDataRequestFailed(ex));
-                }.bind(this))
+                }
+                .bind(this))
         }
     }
 

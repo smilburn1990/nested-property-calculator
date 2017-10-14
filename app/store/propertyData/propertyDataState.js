@@ -2,7 +2,7 @@ import propertyDataReducers from '../../reducers/propertyDataReducers'
 
 const initialState = {
     propertyDataStatus: 'INITIAL',
-    propertyData: []
+    propertyData: false
 }
 
 export default function (state = initialState, action) {
@@ -11,7 +11,7 @@ export default function (state = initialState, action) {
             return propertyDataReducers.propertyDataRequested(state, action)
         case 'PROPERTY_DATA_RESOLVED':
             return propertyDataReducers.propertyDataResolved(state, action)
-        case 'PROPERTY_DATA_FAILED':
+        case 'PROPERTY_DATA_REQUEST_FAILED':
             return propertyDataReducers.propertyDataRequestFailed(state, action)
         default:
             return state
