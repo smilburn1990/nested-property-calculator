@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import DropDown from '../../components/DropDown'
+import CheckBoxList from '../../components/CheckBoxList'
 
 export default class PropertyCalculator extends Component {
 
@@ -17,11 +17,11 @@ export default class PropertyCalculator extends Component {
     }
 
     renderComponents() {
-        console.log(this.props)
         return (
             <div>
-                <DropDown
+                <CheckBoxList
                     propertyData={this.props.propertyData}
+                    input='1100'
                 />
             </div>
         )

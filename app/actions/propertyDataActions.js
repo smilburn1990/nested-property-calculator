@@ -5,7 +5,7 @@ class PropertyDataActions {
         return (dispatch) => {
             const requestedAction = this.propertyDataRequested()
             dispatch(requestedAction)
-            return fetch(url, method)
+            return fetch(url, {method, headers: { 'x-api-key': apiKey }})
                 .then(function(response) {
                     return response.json()
                 })
