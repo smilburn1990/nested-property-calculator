@@ -5,7 +5,7 @@ class PropertyDataActions {
         return (dispatch) => {
             const requestedAction = this.propertyDataRequested()
             dispatch(requestedAction)
-            return fetch(url, {method, headers: { 'x-api-key': apiKey }})
+            return fetch(url, {method})
                 .then(function(response) {
                     return response.json()
                 })
@@ -44,6 +44,20 @@ class PropertyDataActions {
             error
         }
     }
+
+    addProperty (property) {
+         return {
+            type: 'ADD_PROPERTY',
+            property
+         }
+    }
+
+    removeProperty (property) {
+        return {
+           type: 'REMOVE_PROPERTY',
+           property
+        }
+   }
 
 }
 

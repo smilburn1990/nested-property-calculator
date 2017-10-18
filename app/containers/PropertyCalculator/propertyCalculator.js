@@ -21,7 +21,7 @@ export default class PropertyCalculator extends Component {
             <div>
                 <CheckBoxList
                     propertyData={this.props.propertyData}
-                    input='1100'
+                    inputArea='1100'
                 />
             </div>
         )
