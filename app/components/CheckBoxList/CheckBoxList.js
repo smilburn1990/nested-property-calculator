@@ -13,7 +13,6 @@ export default class CheckBoxList extends Component {
         }
     }
 
-
     render () {
         let styles = {
             container: {
@@ -22,40 +21,24 @@ export default class CheckBoxList extends Component {
             input: {
                 default: {
                     margin: this.props.inputMargin || '0 0.75rem 0.75rem 0',
-                    borderRadius: this.props.borderRadius ||'0',
-                    border: this.props.border || '0.1rem solid ##999999',
-                    WebkitAppearance: this.props.appearance || 'none',
-                    width: this.props.width || '1.375rem',
-                    height: this.props.height ||'1.375rem',
+                    borderRadius: this.props.inputBorderRadius ||'0',
+                    border: this.props.inputBorder || '0.1rem solid #999999',
+                    width: this.props.inputWidth || '1.275rem',
+                    height: this.props.inputHeight ||'1.275rem',
+                    WebkitAppearance: this.props.inputAppearance || 'none',
                     cursor: 'pointer',
-                    backgroundSize: '0%',
-                    display: this.props.display || 'block',
-                    verticalAlign: 'top',
                     textDecoration: 'none',
                     boxShadow: 'none',
                     outline: 'none'
                 },
                 focus: {
-                    backgroundSize: this.props.backgroundSize || '100%',
-                    backgroundPosition: this.props.backgroundPosition || '50% 50%',
-                    backgroundRepeat: 'no-repeat',
-                    border: '0.1rem solid',
-                    backgroundColor: this.props.focusbackgroundColor || '#3278eb'
+                    backgroundColor: this.props.focusBackgroundColor || '#999999'
                 }
             },
             label: {
-                fontSize: this.props.fontSize || '0.875rem',
-                fontWeight: this.props.fontWeight || 'normal',
-                color: this.props.textColor || '#666666',
-                margin: this.props.margin || 0,
-                cursor: 'pointer',
-                display: 'flex',
-                verticalAlign: 'top'
-            },
-            text: {
-                lineHeight: this.props.lineHeight || '1.375rem',
-                color: this.props.textColor || '#666666',
-                fontWeight: this.props.fontWeight || 'normal',
+                fontSize: this.props.labelFontSize || '0.875rem',
+                color: this.props.labelTextColor || '#666666',
+                display: 'flex'
             }
         }
 
@@ -66,9 +49,6 @@ export default class CheckBoxList extends Component {
                     <label style={styles.label} key={index}>
                         <input
                             type='checkbox'
-                            id={index}
-                            name={data.address}
-                            value={data.price}
                             checked={data.selected}
                             style={Object.assign({},
                                 styles.input.default,
@@ -76,10 +56,10 @@ export default class CheckBoxList extends Component {
                             )}
                             onChange={this.handleChange.bind(this, data)}
                         />
-                        <span style={styles.text}>{data.address}</span>
+                        <span>{data.address}</span>
                     </label>
                 )}
-                <span>{`Estimated price: £${this.props.total}`}</span>
+                <span style={styles.total}>{`Estimated price: £${this.props.total}`}</span>
             </div>
         )
     }
