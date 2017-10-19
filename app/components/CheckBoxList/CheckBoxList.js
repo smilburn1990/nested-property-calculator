@@ -59,7 +59,7 @@ export default class CheckBoxList extends Component {
                         <span>{data.address}</span>
                     </label>
                 )}
-                <span style={styles.total}>{`Estimated price: £${this.props.total}`}</span>
+                <span style={styles.total}>{`Estimated price: £${this.props.total * this.props.inputArea}`}</span>
             </div>
         )
     }
